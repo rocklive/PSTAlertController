@@ -56,6 +56,10 @@
 
 @implementation PSTExtendedAlertController
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (self.viewWillDisappearBlock) self.viewWillDisappearBlock();
